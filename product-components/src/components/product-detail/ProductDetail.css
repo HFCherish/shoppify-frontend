@@ -1,0 +1,45 @@
+.Product-detail {
+    text-align: center;
+    width: 80%;
+    height: 210px;
+    margin: 0 auto 0 auto;
+}
+
+.Product-logo-part {
+    height: 200px;
+    width: 30%;
+    min-width: 200px;
+    float: left;
+}
+
+.Product-logo {
+    margin: 20px auto 20px auto;
+    height: 180px;
+    width: 180px;
+}
+
+.Product-desc-board {
+    background-color: floralwhite;
+    height: 200px;
+    padding: 10px;
+    float: left;
+    width: 60%;
+}
+
+.Product-name {
+    font-size: large;
+    color: #222222;
+    text-align: left;
+}
+
+.Product-desc {
+    font-size: small;
+    color: grey;
+    text-align: left;
+}
+
+.Product-price {
+    font-size: xx-large;
+    color: #222222;
+    text-align: left;
+}
