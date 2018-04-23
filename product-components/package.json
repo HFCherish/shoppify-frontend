@@ -2,6 +2,12 @@
   "name": "product-components",
   "version": "0.1.0",
   "private": true,
+  "proxy": {
+    "/pricings/current": {
+      "target": "http://localhost:8002",
+      "changeOrigin": true
+    }
+  },
   "devDependencies": {
     "react-scripts": "1.1.4"
   },
