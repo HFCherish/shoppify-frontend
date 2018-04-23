@@ -1,0 +1,37 @@
+.Product-list {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.Product-list-item {
+    width: 200px;
+    height: 400px;
+    float: left;
+    list-style-type: none;
+}
+
+.Product-logo-part {
+    margin: 0 auto 0 auto;
+}
+
+.Product-logo {
+    margin: 20px auto 20px auto;
+    height: 180px;
+    width: 180px;
+}
+
+.Product-name {
+    font-size: small;
+    color: #222222;
+    text-align: left;
+}
+
+.Product-price {
+    text-align: left;
+}
+
+.Product-price-value {
+    font-size: x-large;
+    color: brown;
+}
