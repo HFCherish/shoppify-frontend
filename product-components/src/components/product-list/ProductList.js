@@ -39,14 +39,16 @@ class ProductListItem extends Component {
         return this.props.productDetail.price;
     }
 
+    getProductLink() {
+        return "/pricings/current?product_id=" + this.props.productDetail.product.id + "&get_product_detail=true";
+    }
+
     render() {
         return (
             <li className="Product-list-item">
-                <ProductImg />
-                <div className="product-name-price">
-                    <ProductName productName={this.getName()}/>
-                    <ProductPrice price={this.getPrice()}/>
-                </div>
+                <a href={this.getProductLink()}> <ProductImg /> </a>
+                <ProductName productName={this.getName()} productUrl={this.getProductLink()}/>
+                <ProductPrice price={this.getPrice()}/>
             </li>
         );
     }
@@ -56,7 +58,9 @@ class ProductName extends Component {
     render() {
         return (
             <div className="Product-name">
-                {this.props.productName}
+                <a href={this.props.productUrl} className="product-link">
+                    {this.props.productName}
+                </a>
             </div>
         );
     }
