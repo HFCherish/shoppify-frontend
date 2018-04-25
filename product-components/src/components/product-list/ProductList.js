@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import productLogo from "./product.png";
 import ServerClient from "./ServerClient";
+import {Link} from "react-router-dom";
 import "./ProductList.css";
 
 class ProductList extends Component {
@@ -40,14 +41,19 @@ class ProductListItem extends Component {
     }
 
     getProductLink() {
-        return "/pricings/current?product_id=" + this.props.productDetail.product.id + "&get_product_detail=true";
+        return "/products?product_id=" + this.getProductId();
+    }
+
+    getProductId() {
+        return this.props.productDetail.product.id;
     }
 
     render() {
         return (
             <li className="Product-list-item">
-                <a href={this.getProductLink()}> <ProductImg /> </a>
-                <ProductName productName={this.getName()} productUrl={this.getProductLink()}/>
+                <Link to={this.getProductLink()}> <ProductImg /> </Link>
+                <Link to={this.getProductLink()}> <ProductName productName={this.getName()}
+                                                               productUrl={this.getProductLink()}/> </Link>
                 <ProductPrice price={this.getPrice()}/>
             </li>
         );
@@ -58,9 +64,7 @@ class ProductName extends Component {
     render() {
         return (
             <div className="Product-name">
-                <a href={this.props.productUrl} className="product-link">
-                    {this.props.productName}
-                </a>
+                {this.props.productName}
             </div>
         );
     }

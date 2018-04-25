@@ -10,6 +10,9 @@ class ProductDetail extends Component {
 
 
     componentWillMount() {
+        console.log("******* props: ", this.props);
+        console.log("******* match: ", this.props.match);
+        console.log("******* match: ", this.props.match.params.productId);
         ServerClient.getPricingDetail(this.props.productId, json => {
             this.setState({
                 productJson: json,

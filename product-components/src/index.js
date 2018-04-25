@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ProductListApp from "./components/product-list/ProductList";
+import routes from "./config/routes";
 import "./index.css";
 // import ProductDetailApp from "./components/product-detail/ProductDetailApp";
 
@@ -10,6 +10,6 @@ import "./index.css";
 // );
 
 ReactDOM.render(
-    <ProductListApp />,
-  document.getElementById('root')
+    routes,
+    document.getElementById('root')
 );
